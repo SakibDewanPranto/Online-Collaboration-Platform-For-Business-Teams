@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    textarea {
+      width: 500px;
+      height: 150px;
+
+    }
+
+    .myDiv {
+      text-align: center;
+      border-style: double
+    }
+
+    div {
+      border: 1px;
+      border-color: black;
+    }
+
+    body {
+      background-color: whitesmoke;
+    }
+
+    i {
+      font-family: "Times New Roman", Times, serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="myDiv">
+    <br>
+    <form name="uploadForm" action="http://localhost:3000/uploadForm" method="post" enctype="multipart/form-data" />
+    <input type="submit" value="submit" />
+    <input type="file" name="fileData" id="fileData_" />
+
+    </form><br>
+    <button id="pButton">Enter password </button>
+    <input id="pInput">
+    <p>current password: <i id="pString"></i> </p>
+    <button type="button" onclick="loadXMLDoc()">See available files</button>
+    <div id="TARGET"></div><br>
+
+  </div>
+
+  <div id="textReceived">
+    <h2><b>Text received</b></h2>
+  </div>
+
+
+  <label>Send text:</label>
+  </br>
+  <textarea id="textAreaInput"></textarea>
+  </br>
+  <button id="sendText">send</button>
+  <script src="../model/client_model.js"></script>
+  <script src="../view/client_view.js"></script>
+  <script src="../controller/client_controller.js"></script>
+
+</body>
+
+</html>
